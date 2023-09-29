@@ -1,0 +1,631 @@
+/* Resets */
+hr {
+  border:none;
+  border-left: 1px solid #fff;
+  width:1px;       
+}
+.navbar-logo{
+	padding: 10px;
+	color: #000000;
+}
+.navbar-mainbg{
+	background-color: #ffffff;
+	padding: 0px;
+}
+#navbarSupportedContent{
+	overflow: hidden;
+	position: relative;
+}
+#navbarSupportedContent ul{
+	padding: 0px;
+	margin: 0px;
+}
+#navbarSupportedContent ul li a i{
+	margin-right: 10px;
+}
+#navbarSupportedContent li {
+	list-style-type: none;
+	float: left;
+}
+#navbarSupportedContent ul li a{
+	color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 20px 20px;
+    transition-duration:0.6s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+}
+#navbarSupportedContent>ul>li.active>a{
+	color: #ffffff;
+	background-color: transparent;
+	transition: all 0.7s;
+}
+#navbarSupportedContent a:not(:only-child):after {
+	content: "\f105";
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	font-size: 14px;
+	font-family: "Font Awesome 5 Free";
+	display: inline-block;
+	padding-right: 3px;
+	vertical-align: middle;
+	font-weight: 900;
+	transition: 0.5s;
+}
+#navbarSupportedContent .active>a:not(:only-child):after {
+	transform: rotate(90deg);
+}
+.hori-selector{
+	display:inline-block;
+	position:absolute;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	transition-duration:0.6s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	background-image: linear-gradient(
+  0deg,
+  hsl(333deg 86% 46%) 0%,
+  hsl(337deg 80% 51%) 5%,
+  hsl(342deg 86% 55%) 11%,
+  hsl(347deg 92% 58%) 16%,
+  hsl(352deg 99% 62%) 21%,
+  hsl(357deg 100% 64%) 26%,
+  hsl(3deg 100% 65%) 32%,
+  hsl(9deg 100% 64%) 37%,
+  hsl(14deg 100% 62%) 42%,
+  hsl(19deg 100% 61%) 47%,
+  hsl(24deg 100% 60%) 53%,
+  hsl(29deg 100% 58%) 58%,
+  hsl(33deg 100% 56%) 63%,
+  hsl(37deg 100% 54%) 68%,
+  hsl(41deg 100% 51%) 74%,
+  hsl(44deg 100% 50%) 79%,
+  hsl(47deg 100% 50%) 84%,
+  hsl(50deg 100% 50%) 89%,
+  hsl(52deg 100% 50%) 95%,
+  hsl(55deg 100% 50%) 100%
+);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	margin-top: 1px;
+}
+.hori-selector .right,
+.hori-selector .left{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background-image: linear-gradient(
+  0deg,
+  hsl(333deg 86% 46%) 0%,
+  hsl(337deg 80% 51%) 5%,
+  hsl(342deg 86% 55%) 11%,
+  hsl(347deg 92% 58%) 16%,
+  hsl(352deg 99% 62%) 21%,
+  hsl(357deg 100% 64%) 26%,
+  hsl(3deg 100% 65%) 32%,
+  hsl(9deg 100% 64%) 37%,
+  hsl(14deg 100% 62%) 42%,
+  hsl(19deg 100% 61%) 47%,
+  hsl(24deg 100% 60%) 53%,
+  hsl(29deg 100% 58%) 58%,
+  hsl(33deg 100% 56%) 63%,
+  hsl(37deg 100% 54%) 68%,
+  hsl(41deg 100% 51%) 74%,
+  hsl(44deg 100% 50%) 79%,
+  hsl(47deg 100% 50%) 84%,
+  hsl(50deg 100% 50%) 89%,
+  hsl(52deg 100% 50%) 95%,
+  hsl(55deg 100% 50%) 100%
+);
+	bottom: 1px;
+}
+.hori-selector .right{
+	right: -25px;
+}
+.hori-selector .left{
+	left: -25px;
+}
+.hori-selector .right:before,
+.hori-selector .left:before{
+	content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.hori-selector .right:before{
+	bottom: 0;
+    right: -25px;
+}
+.hori-selector .left:before{
+	bottom: 0;
+    left: -25px;
+}
+
+
+@media(min-width: 992px){
+	.navbar-expand-custom {
+	    -ms-flex-flow: row nowrap;
+	    flex-flow: row nowrap;
+	    -ms-flex-pack: start;
+	    justify-content: flex-start;
+	}
+	.navbar-expand-custom .navbar-nav {
+	    -ms-flex-direction: row;
+	    flex-direction: row;
+	}
+	.navbar-expand-custom .navbar-toggler {
+	    display: none;
+	}
+	.navbar-expand-custom .navbar-collapse {
+	    display: -ms-flexbox!important;
+	    display: flex!important;
+	    -ms-flex-preferred-size: auto;
+	    flex-basis: auto;
+	}
+}
+
+
+@media (max-width: 991px){
+	#navbarSupportedContent ul li a{
+		padding: 12px 30px;
+	}
+	.hori-selector{
+		margin-top: 0px;
+		margin-left: 10px;
+		border-radius: 0;
+		border-top-left-radius: 25px;
+		border-bottom-left-radius: 25px;
+	}
+	.hori-selector .left,
+	.hori-selector .right{
+		right: 10px;
+	}
+	.hori-selector .left{
+		top: -25px;
+		left: auto;
+	}
+	.hori-selector .right{
+		bottom: -25px;
+	}
+	.hori-selector .left:before{
+		left: -25px;
+		top: -25px;
+	}
+	.hori-selector .right:before{
+		bottom: -25px;
+		left: -25px;
+	}
+}
+.socio{
+  background-image: linear-gradient(
+  270deg,
+  hsl(333deg 86% 46%) 0%,
+  hsl(337deg 80% 51%) 7%,
+  hsl(342deg 86% 55%) 13%,
+  hsl(347deg 92% 58%) 18%,
+  hsl(352deg 99% 62%) 24%,
+  hsl(357deg 100% 64%) 30%,
+  hsl(3deg 100% 65%) 35%,
+  hsl(9deg 100% 64%) 41%,
+  hsl(14deg 100% 62%) 46%,
+  hsl(19deg 100% 61%) 51%,
+  hsl(24deg 100% 60%) 56%,
+  hsl(29deg 100% 58%) 62%,
+  hsl(33deg 100% 56%) 67%,
+  hsl(37deg 100% 54%) 72%,
+  hsl(41deg 100% 51%) 76%,
+  hsl(44deg 100% 50%) 81%,
+  hsl(47deg 100% 50%) 86%,
+  hsl(50deg 100% 50%) 91%,
+  hsl(52deg 100% 50%) 95%,
+  hsl(55deg 100% 50%) 100%
+);
+}
+.socio{
+  padding: 10px;
+}
+.socio span{
+  border-right: 2px solid rgb(255, 255, 255);
+  display: inline-block;
+  padding-right: 5px;
+  margin-right: 15px;
+}
+
+/* Jumbotron (hero) */
+.jumbotron {
+  position: relative;
+  background: url(https://png.pngtree.com/thumb_back/fh260/background/20230220/pngtree-meeting-in-conference-room-business-colleagues-meeting-in-conference-room-image_1642366.jpg) no-repeat bottom center/cover;
+}
+.jumbotron:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.jumbotron .container {
+  padding: 200px 0;
+}
+.jumbotron h1,
+.jumbotron .lead {
+  color: #fff;
+}
+.outer {
+  width: 5px;
+  height: 100%;
+  margin-left: -5%;
+  position:absolute;
+  overflow: hidden;
+}
+.inner {
+  position: absolute;
+  width:80%;
+  height: 100%;
+  background-image: linear-gradient(
+  0deg,
+  hsl(333deg 86% 46%) 0%,
+  hsl(337deg 80% 51%) 5%,
+  hsl(342deg 86% 55%) 11%,
+  hsl(347deg 92% 58%) 16%,
+  hsl(352deg 99% 62%) 21%,
+  hsl(357deg 100% 64%) 26%,
+  hsl(3deg 100% 65%) 32%,
+  hsl(9deg 100% 64%) 37%,
+  hsl(14deg 100% 62%) 42%,
+  hsl(19deg 100% 61%) 47%,
+  hsl(24deg 100% 60%) 53%,
+  hsl(29deg 100% 58%) 58%,
+  hsl(33deg 100% 56%) 63%,
+  hsl(37deg 100% 54%) 68%,
+  hsl(41deg 100% 51%) 74%,
+  hsl(44deg 100% 50%) 79%,
+  hsl(47deg 100% 50%) 84%,
+  hsl(50deg 100% 50%) 89%,
+  hsl(52deg 100% 50%) 95%,
+  hsl(55deg 100% 50%) 100%
+);
+  top: 1%;
+}
+
+.feature-feature {
+  gap: 20px;
+  width: 368px;
+  display: grid;
+  position: relative;
+  max-width: 300px;
+  align-items: flex-start;
+  grid-column:auto;
+}
+
+.feature-heading {
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.feature-heading svg{
+  width: 40px;
+  height: 40px;
+}
+.feature-icon {
+  width: 43px;
+  height: 44px;
+  object-fit: cover;
+}
+.feature-header {
+  color: #ffffff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.home-feaures {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top:2%;
+  padding-left: 15px;
+  padding-right:15px;
+  flex-direction: row;
+  padding-bottom:2%;
+  justify-content: center;
+  background-image: linear-gradient(
+  270deg,
+  hsl(333deg 86% 46%) 0%,
+  hsl(337deg 80% 51%) 7%,
+  hsl(342deg 86% 55%) 13%,
+  hsl(347deg 92% 58%) 18%,
+  hsl(352deg 99% 62%) 24%,
+  hsl(357deg 100% 64%) 30%,
+  hsl(3deg 100% 65%) 35%,
+  hsl(9deg 100% 64%) 41%,
+  hsl(14deg 100% 62%) 46%,
+  hsl(19deg 100% 61%) 51%,
+  hsl(24deg 100% 60%) 56%,
+  hsl(29deg 100% 58%) 62%,
+  hsl(33deg 100% 56%) 67%,
+  hsl(37deg 100% 54%) 72%,
+  hsl(41deg 100% 51%) 76%,
+  hsl(44deg 100% 50%) 81%,
+  hsl(47deg 100% 50%) 86%,
+  hsl(50deg 100% 50%) 91%,
+  hsl(52deg 100% 50%) 95%,
+  hsl(55deg 100% 50%) 100%
+);
+}
+.feature-description {
+  color: rgb(255, 255, 255);
+  width: 301px;
+  font-size: 18px;
+  font-family: Karla;
+  line-height: 27px;
+}
+@media(max-width: 767px) {
+  .feature-feature {
+    max-width: 100%;
+  }
+}
+
+
+.sec-features .outer {
+  width: 14%;
+  height: 1%;
+  margin-left: 0px;
+  position:absolute;
+  overflow: hidden;
+}
+.sec-features .inner {
+  position: absolute;
+  width:80%;
+  height: 100%;
+  background-image: linear-gradient(
+  0deg,
+  hsl(333deg 86% 46%) 0%,
+  hsl(337deg 80% 51%) 5%,
+  hsl(342deg 86% 55%) 11%,
+  hsl(347deg 92% 58%) 16%,
+  hsl(352deg 99% 62%) 21%,
+  hsl(357deg 100% 64%) 26%,
+  hsl(3deg 100% 65%) 32%,
+  hsl(9deg 100% 64%) 37%,
+  hsl(14deg 100% 62%) 42%,
+  hsl(19deg 100% 61%) 47%,
+  hsl(24deg 100% 60%) 53%,
+  hsl(29deg 100% 58%) 58%,
+  hsl(33deg 100% 56%) 63%,
+  hsl(37deg 100% 54%) 68%,
+  hsl(41deg 100% 51%) 74%,
+  hsl(44deg 100% 50%) 79%,
+  hsl(47deg 100% 50%) 84%,
+  hsl(50deg 100% 50%) 89%,
+  hsl(52deg 100% 50%) 95%,
+  hsl(55deg 100% 50%) 100%
+);
+  top: 1%;
+}
+.sec-features span{
+  padding-left: 10%;
+  width: 380px;
+  height: 400px;
+}
+.sec-features span img{
+  width: 490px;
+  height: 480px;
+}
+
+
+/* Footer */
+.footer {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: #212121;
+}
+.myButton {
+	background-image: linear-gradient(
+  0deg,
+  hsl(333deg 86% 46%) 0%,
+  hsl(337deg 80% 51%) 5%,
+  hsl(342deg 86% 55%) 11%,
+  hsl(347deg 92% 58%) 16%,
+  hsl(352deg 99% 62%) 21%,
+  hsl(357deg 100% 64%) 26%,
+  hsl(3deg 100% 65%) 32%,
+  hsl(9deg 100% 64%) 37%,
+  hsl(14deg 100% 62%) 42%,
+  hsl(19deg 100% 61%) 47%,
+  hsl(24deg 100% 60%) 53%,
+  hsl(29deg 100% 58%) 58%,
+  hsl(33deg 100% 56%) 63%,
+  hsl(37deg 100% 54%) 68%,
+  hsl(41deg 100% 51%) 74%,
+  hsl(44deg 100% 50%) 79%,
+  hsl(47deg 100% 50%) 84%,
+  hsl(50deg 100% 50%) 89%,
+  hsl(52deg 100% 50%) 95%,
+  hsl(55deg 100% 50%) 100%
+);
+	background-color:#eb9b70;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:10px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #662834;
+}
+.myButton:hover {
+	background:transparent;
+  background-color:#eb9b70;
+	
+}
+.myButton:active {
+	position:relative;
+}
+
+.sec-service{
+  padding-top: 80px;
+  padding-bottom: 108px;
+  background: #d4d4d4;
+}
+
+.sec-service .outer {
+  width: 11%;
+  height:10px;
+  margin-left: 0px;
+  position:absolute;
+  overflow: hidden;
+}
+.sec-service .inner {
+  position: absolute;
+  width:60%;
+  height: 50%;
+  background-image: linear-gradient(
+  0deg,
+  hsl(333deg 86% 46%) 0%,
+  hsl(337deg 80% 51%) 5%,
+  hsl(342deg 86% 55%) 11%,
+  hsl(347deg 92% 58%) 16%,
+  hsl(352deg 99% 62%) 21%,
+  hsl(357deg 100% 64%) 26%,
+  hsl(3deg 100% 65%) 32%,
+  hsl(9deg 100% 64%) 37%,
+  hsl(14deg 100% 62%) 42%,
+  hsl(19deg 100% 61%) 47%,
+  hsl(24deg 100% 60%) 53%,
+  hsl(29deg 100% 58%) 58%,
+  hsl(33deg 100% 56%) 63%,
+  hsl(37deg 100% 54%) 68%,
+  hsl(41deg 100% 51%) 74%,
+  hsl(44deg 100% 50%) 79%,
+  hsl(47deg 100% 50%) 84%,
+  hsl(50deg 100% 50%) 89%,
+  hsl(52deg 100% 50%) 95%,
+  hsl(55deg 100% 50%) 100%
+);
+  top: 1%;
+}
+
+.sec-service .card{
+  width: 370px;
+  height: 250px;
+}
+.sec-service .card img{
+  width: 370px;
+  height: 250px;
+  
+}
+.sec-service .card .rect{
+  background: #fff;
+  margin-top: -10%;
+  padding: -1px;
+  width: 270px;
+  position: relative;
+  z-index: 1;
+  margin-left: 27.7%;
+}
+.sec-service .card .rect p{
+  margin-top: -15%;
+  margin-left: 22%;
+  font-size: 22px;
+  font-weight: 600;
+  position: absolute;
+}
+.sec-service .card button {
+  width: 50px;
+  height: 50px;
+  margin-left: -7%;
+  padding-top: -2%;
+  border-radius: 50%;
+  border: 0px;
+  border: transparent;
+  background-image: linear-gradient(
+  0deg,
+  hsl(333deg 86% 46%) 0%,
+  hsl(337deg 80% 51%) 5%,
+  hsl(342deg 86% 55%) 11%,
+  hsl(347deg 92% 58%) 16%,
+  hsl(352deg 99% 62%) 21%,
+  hsl(357deg 100% 64%) 26%,
+  hsl(3deg 100% 65%) 32%,
+  hsl(9deg 100% 64%) 37%,
+  hsl(14deg 100% 62%) 42%,
+  hsl(19deg 100% 61%) 47%,
+  hsl(24deg 100% 60%) 53%,
+  hsl(29deg 100% 58%) 58%,
+  hsl(33deg 100% 56%) 63%,
+  hsl(37deg 100% 54%) 68%,
+  hsl(41deg 100% 51%) 74%,
+  hsl(44deg 100% 50%) 79%,
+  hsl(47deg 100% 50%) 84%,
+  hsl(50deg 100% 50%) 89%,
+  hsl(52deg 100% 50%) 95%,
+  hsl(55deg 100% 50%) 100%
+);
+}
+.sec-service .card button svg{
+  color: #fff;
+}
+.sec-service .card .myButton:hover {
+	background:transparent;
+  background-color:#eb9b70;
+	
+}
+.sec-service .card .myButton:active {
+	position:relative;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px; 
+  height: 8px; 
+}
+::-webkit-scrollbar:hover {
+  width: 10px; 
+  height: 8px; 
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px; 
+  background-image: linear-gradient(
+  0deg,
+  hsl(333deg 86% 46%) 0%,
+  hsl(337deg 80% 51%) 5%,
+  hsl(342deg 86% 55%) 11%,
+  hsl(347deg 92% 58%) 16%,
+  hsl(352deg 99% 62%) 21%,
+  hsl(357deg 100% 64%) 26%,
+  hsl(3deg 100% 65%) 32%,
+  hsl(9deg 100% 64%) 37%,
+  hsl(14deg 100% 62%) 42%,
+  hsl(19deg 100% 61%) 47%,
+  hsl(24deg 100% 60%) 53%,
+  hsl(29deg 100% 58%) 58%,
+  hsl(33deg 100% 56%) 63%,
+  hsl(37deg 100% 54%) 68%,
+  hsl(41deg 100% 51%) 74%,
+  hsl(44deg 100% 50%) 79%,
+  hsl(47deg 100% 50%) 84%,
+  hsl(50deg 100% 50%) 89%,
+  hsl(52deg 100% 50%) 95%,
+  hsl(55deg 100% 50%) 100%
+);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c2bfbf;
+}
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+}
